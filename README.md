@@ -1,4 +1,11 @@
-### Hi there 👋
+### Your favorite idiot, that has too many interests.
+=====================================================
+website: https://genvara.github.io
+discord: Genvara#2807
+twitter: https://twitter.com/Genvaraxd
+email: genvara@ttm.sh
+steam: https://steamcommunity.com/id/Genvara
+=====================================================
 
 <!--
 **Genvara/Genvara** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
