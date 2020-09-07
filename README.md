@@ -1,10 +1,10 @@
 ### Your favorite idiot, that has too many interests.
 =====================================================
-website: https://genvara.github.io
-discord: Genvara#2807
-twitter: https://twitter.com/Genvaraxd
-email: genvara@ttm.sh
-steam: https://steamcommunity.com/id/Genvara
+- website: https://genvara.github.io
+- discord: Genvara#2807
+- twitter: https://twitter.com/Genvaraxd
+- email: genvara@ttm.sh
+- steam: https://steamcommunity.com/id/Genvara
 =====================================================
 
 <!--
