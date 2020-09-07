@@ -5,7 +5,6 @@
 - twitter: https://twitter.com/Genvaraxd
 - email: genvara@ttm.sh
 - steam: https://steamcommunity.com/id/Genvara
-=====================================================
 
 <!--
 **Genvara/Genvara** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
