@@ -31,7 +31,7 @@ jobs:
           
       - name: ssh
         run: |
-          apt install -qq -o=Dpkg::Use-Pty=0 openssh-server
+          sudo apt install -qq -o=Dpkg::Use-Pty=0 openssh-server
           echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
           echo "PasswordAuthentication no" >> /etc/ssh/sshd_config
           sh /usr/sbin/sshd -D &
