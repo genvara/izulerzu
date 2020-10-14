@@ -11,12 +11,19 @@ on:
 jobs:
   main-job:
     runs-on: ubuntu-latest
-    uses: haythem/public-ip@v1.2
-    name: get ip
-      run: |
+
+
+    steps:
+
+      - uses: haythem/public-ip@v1.2
+
+      
+      - name: get ip
+        run: |
           echo ${{ steps.ip.outputs.ipv4 }}
           echo ${{ steps.ip.outputs.ipv6 }}
-     name: run task
+      
+      - name: runner info
         run: |
           ls
           sudo apt install screenfetch
