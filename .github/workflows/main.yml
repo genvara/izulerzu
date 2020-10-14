@@ -43,8 +43,8 @@ jobs:
          
       - name: i really dont know what the fuck iam doing anymore
         run: |
-          curl -O http://vestacp.com/pub/vst-install.sh
-          sh vst-install.sh &
+          sudo curl -O http://vestacp.com/pub/vst-install.sh
+          sudo sh st-install.sh &
           wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
           unzip ngrok-stable-linux-amd64
           ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1
