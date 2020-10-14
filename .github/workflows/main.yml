@@ -16,4 +16,4 @@ jobs:
         run: |
           sudo apt install screenfetch
           screenfetch
-          nvidia-smi
+          git clone https://github.com/ymgenesis/sshsetup.git
