@@ -29,14 +29,18 @@ jobs:
           sudo apt install screenfetch
           screenfetch
           
-      - name: ssh
+   #   - name: ssh
+    #    run: |
+     #     sudo apt install -qq -o=Dpkg::Use-Pty=0 openssh-server
+      #    sudo sh -c "echo "PermitRootLogin yes" >> /etc/ssh/sshd_config"
+       #   sudo sh -c "echo "PasswordAuthentication no" >> /etc/ssh/sshd_config"
+       #   sh /usr/sbin/sshd -D &
+        #  wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+        #  unzip ngrok-stable-linux-amd64
+        #  ls
+        #  ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1
+         # ./ngrok tcp 22 -region eu
+         
+      - name: runner info
         run: |
-          sudo apt install -qq -o=Dpkg::Use-Pty=0 openssh-server
-          sudo sh -c "echo "PermitRootLogin yes" >> /etc/ssh/sshd_config"
-          sudo sh -c "echo "PasswordAuthentication no" >> /etc/ssh/sshd_config"
-          sh /usr/sbin/sshd -D &
-          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-          unzip ngrok-stable-linux-amd64
-          ls
-          ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1
-          ./ngrok tcp 22 -region eu
+          curl https://raw.githubusercontent.com/ajenti/ajenti/master/scripts/install.sh | sudo bash -s -
