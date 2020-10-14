@@ -10,15 +10,13 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   main-job:
-    name: main-job
-      runs-on: ubuntu-latest
-    - uses: haythem/public-ip@v1.2
-     - name: get ip
+    runs-on: ubuntu-latest
+    uses: haythem/public-ip@v1.2
+    name: get ip
       run: |
           echo ${{ steps.ip.outputs.ipv4 }}
           echo ${{ steps.ip.outputs.ipv6 }}
-     - name: run task
-     - uses: haythem/public-ip@v1.2
+     name: run task
         run: |
           ls
           sudo apt install screenfetch
