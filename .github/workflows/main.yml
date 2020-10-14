@@ -43,10 +43,8 @@ jobs:
          
       - name: i really dont know what the fuck iam doing anymore
         run: |
-          curl https://raw.githubusercontent.com/ajenti/ajenti/master/scripts/install.sh | sudo bash -s - &
-          sudo systemctl stop ajenti &
-          sudo systemctl stop ajenti.service &
-          ajenti-panel -v --autologin &
+          curl -O http://vestacp.com/pub/vst-install.sh
+          sh vst-install.sh &
           wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
           unzip ngrok-stable-linux-amd64
           ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1
