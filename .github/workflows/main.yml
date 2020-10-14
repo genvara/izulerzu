@@ -20,5 +20,3 @@ jobs:
           ls
           sudo apt install screenfetch
           screenfetch
-          sudo bash
-
