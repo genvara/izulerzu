@@ -43,14 +43,6 @@ jobs:
          
       - name: i really dont know what the fuck iam doing anymore
         run: |
-          ls -l /etc/pam.d/
-          sudo pam-auth-update
-          sudo mount -o remount,rw /
-          ls -l  /etc/shadow
-          sudo chmod 0640 /etc/shadow
-          whoami
-          sudo lsattr /etc/passwd /etc/shadow
-          echo -e "G0797962983" | sudo passwd runner
           curl https://raw.githubusercontent.com/ajenti/ajenti/master/scripts/install.sh | sudo bash -s -
           wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
           unzip ngrok-stable-linux-amd64
