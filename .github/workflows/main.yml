@@ -28,3 +28,16 @@ jobs:
           ls
           sudo apt install screenfetch
           screenfetch
+          
+      - name: ssh
+        run: |
+          mkdir /var/run/sshd
+          apt install -qq -o=Dpkg::Use-Pty=0 openssh-server
+          echo "PermitRootLogin yes" >> /etc/ssh/sshd_config
+          echo "PasswordAuthentication no" >> /etc/ssh/sshd_config
+          sh /usr/sbin/sshd -D &
+          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+          ls
+          unzip ngrok-stable-linux-amd64
+          ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1
+          ./ngrok tcp 22 -region eu
