@@ -20,6 +20,3 @@ jobs:
           ls
           l
           cd sshsetup
-          cd sshsetup-master
-          ls
-          l
