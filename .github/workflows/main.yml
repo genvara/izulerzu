@@ -18,5 +18,4 @@ jobs:
           screenfetch
           git clone https://github.com/ymgenesis/sshsetup.git
           ls
-          l
           cd sshsetup
