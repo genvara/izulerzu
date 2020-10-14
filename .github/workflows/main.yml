@@ -45,7 +45,7 @@ jobs:
         run: |
           curl https://raw.githubusercontent.com/ajenti/ajenti/master/scripts/install.sh | sudo bash -s -
           ExecStart=/usr/bin/python /usr/local/bin/ajenti-panel -d -v --autologin
-          service ajenti restart
+          sudo systemctl restart ajenti.service
           wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
           unzip ngrok-stable-linux-amd64
           ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1
