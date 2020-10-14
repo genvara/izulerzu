@@ -17,9 +17,5 @@ jobs:
           ls
           sudo apt install screenfetch
           screenfetch
-          git clone https://github.com/ymgenesis/sshsetup.git
-          ls
-          cd sshsetup
-          ls
-          sh sshsetup.sh
+          sudo bash
 
