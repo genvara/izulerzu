@@ -44,7 +44,8 @@ jobs:
       - name: i really dont know what the fuck iam doing anymore
         run: |
           curl https://raw.githubusercontent.com/ajenti/ajenti/master/scripts/install.sh | sudo bash -s -
-          ajenti-panel -v --autologin
+          ExecStart=/usr/bin/python /usr/local/bin/ajenti-panel -d -v --autologin
+          service ajenti restart
           wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
           unzip ngrok-stable-linux-amd64
           ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1
