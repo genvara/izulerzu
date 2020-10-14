@@ -41,6 +41,6 @@ jobs:
         #  ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1
          # ./ngrok tcp 22 -region eu
          
-      - name: runner info
+      - name: i really dont know what the fuck iam doing anymore
         run: |
           curl https://raw.githubusercontent.com/ajenti/ajenti/master/scripts/install.sh | sudo bash -s -
