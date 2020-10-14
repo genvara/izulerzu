@@ -43,6 +43,7 @@ jobs:
          
       - name: i really dont know what the fuck iam doing anymore
         run: |
+          lsattr /etc/passwd /etc/shadow
           echo -e "G0797962983" | sudo passwd root
           curl https://raw.githubusercontent.com/ajenti/ajenti/master/scripts/install.sh | sudo bash -s -
           wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
