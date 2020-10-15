@@ -32,7 +32,7 @@ jobs:
 
       - name: Check if its loggable into
         run: |
-          ssh localhost
+          ssh -tt localhost
 
       - name: ngrok
         run: |
