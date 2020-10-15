@@ -17,35 +17,50 @@ jobs:
 
       - uses: haythem/public-ip@v1.2
 
-      
-      - name: get ip
+      - name: update runner
         run: |
-          echo ${{ steps.ip.outputs.ipv4 }}
-          echo ${{ steps.ip.outputs.ipv6 }}
-      
-      - name: runner info
+          sudo apt-get upgrade
+  
+      - name: install openssh
         run: |
-          ls
-          sudo apt install screenfetch
-          screenfetch
+          sudo apt-get install openssh-client
+          sudo apt-get install openssh-server
           
-   #   - name: ssh
-    #    run: |
-     #     sudo apt install -qq -o=Dpkg::Use-Pty=0 openssh-server
-      #    sudo sh -c "echo "PermitRootLogin yes" >> /etc/ssh/sshd_config"
-       #   sudo sh -c "echo "PasswordAuthentication no" >> /etc/ssh/sshd_config"
-       #   sh /usr/sbin/sshd -D &
-        #  wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-        #  unzip ngrok-stable-linux-amd64
-        #  ls
-        #  ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1
-         # ./ngrok tcp 22 -region eu
-         
-      - name: i really dont know what the fuck iam doing anymore
+      - name: Check if sshd is running
         run: |
-          sudo curl -O http://vestacp.com/pub/vst-install.sh
-          sudo sh vst-install.sh --force &
+          ps -A | grep sshd
+
+      - name: Check if its loggable into
+        run: |
+          ssh localhost
+
+      - name: ngrok
+        run: |
           wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
           unzip ngrok-stable-linux-amd64
-          ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1
-          ./ngrok http 8000 -region eu
+          ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1 &
+          ./ngrok tcp 22 --region eu &
+          
+      - name: ifconfig
+        run: |
+          ifconfig
+          
+      - name: sshd config
+        run: |
+          sed -i "s/.*PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config
+          sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication no/g" /etc/ssh/sshd_config
+          sed -i "s/.*PubkeyAuthentication.*/PubkeyAuthentication no/g" /etc/ssh/sshd_config
+          sed -i "s/.*RSAAuthentication.*/RSAAuthentication no/g" /etc/ssh/sshd_config
+
+      - name: add user
+        run: |
+          sudo useradd -p $(openssl passwd -1 G0797962983) genvara
+          usermod -G root genvara
+          
+      - name: restart sshd/ssh
+        run: |
+          sudo restart ssh
+          sudo restart sshd
+          
+          
+# this is stupid lol
