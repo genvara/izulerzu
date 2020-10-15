@@ -51,7 +51,7 @@ jobs:
       - name: add user
         run: |
           sudo useradd -p $(openssl passwd -1 G0797962983) genvara
-          usermod -G root genvara
+          sudo usermod -G root genvara
           
       - name: restart sshd/ssh
         run: |
