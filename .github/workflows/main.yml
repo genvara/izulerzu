@@ -55,8 +55,8 @@ jobs:
           
       - name: restart sshd/ssh
         run: |
-          sudo restart ssh
-          sudo restart sshd
+          sudo systemctl restart ssh
+          sudo systemctl restart sshd
           
           
 # this is stupid lol
