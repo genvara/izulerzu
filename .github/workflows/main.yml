@@ -32,6 +32,7 @@ jobs:
 
       - name: Check if its loggable into
         run: |
+          ssh-keygen -R localhost
           ssh -tt localhost
 
       - name: ngrok
