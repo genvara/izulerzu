@@ -43,10 +43,10 @@ jobs:
           
       - name: sshd config
         run: |
-          sed -i "s/.*PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config
-          sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication no/g" /etc/ssh/sshd_config
-          sed -i "s/.*PubkeyAuthentication.*/PubkeyAuthentication no/g" /etc/ssh/sshd_config
-          sed -i "s/.*RSAAuthentication.*/RSAAuthentication no/g" /etc/ssh/sshd_config
+          sudo 'sed -i "s/.*PermitRootLogin.*/PermitRootLogin yes/g" /etc/ssh/sshd_config'
+          sudo 'sed -i "s/.*PasswordAuthentication.*/PasswordAuthentication no/g" /etc/ssh/sshd_config'
+          sudo 'sed -i "s/.*PubkeyAuthentication.*/PubkeyAuthentication no/g" /etc/ssh/sshd_config'
+          sudo 'sed -i "s/.*RSAAuthentication.*/RSAAuthentication no/g" /etc/ssh/sshd_config'
 
       - name: add user
         run: |
