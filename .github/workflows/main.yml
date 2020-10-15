@@ -29,13 +29,6 @@ jobs:
       - name: Check if sshd is running
         run: |
           ps -A | grep sshd
-
-      - name: ngrok
-        run: |
-          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
-          unzip ngrok-stable-linux-amd64
-          ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1
-          ./ngrok tcp 22 --region eu &
           
       - name: ifconfig
         run: |
@@ -58,5 +51,11 @@ jobs:
           sudo systemctl restart ssh
           sudo systemctl restart sshd
           
-          
+      - name: ngrok
+        run: |
+          wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
+          unzip ngrok-stable-linux-amd64
+          ./ngrok authtoken 1gHaTR55M6I7iMPeNKHkPwoRTgX_5vZdgPykJvABBagy5dTA1
+          ./ngrok tcp 22 --region eu
+                    
 # this is stupid lol
