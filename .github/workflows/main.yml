@@ -32,6 +32,7 @@ jobs:
 
       - name: Check if its loggable into
         run: |
+          mkdir /~/.ssh
           ssh-keygen -t rsa -b 4096 -C "localhost" -f /~/.ssh/id_rsa
           ssh -tt localhost
 
