@@ -30,12 +30,6 @@ jobs:
         run: |
           ps -A | grep sshd
 
-      - name: Check if its loggable into
-        run: |
-          mkdir /~/.ssh
-          ssh-keygen -t rsa -b 4096 -C "localhost" -f /~/.ssh/id_rsa
-          ssh -tt localhost
-
       - name: ngrok
         run: |
           wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
