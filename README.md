@@ -2,7 +2,7 @@
 =====================================================
 - website: https://genvara.github.io
 - discord: Genvara#2807
-- twitter: https://twitter.com/Genvaraxd
+- twitter: https://twitter.com/Genvarara
 - email: genvara@ttm.sh
 - steam: https://steamcommunity.com/id/Genvara
 
