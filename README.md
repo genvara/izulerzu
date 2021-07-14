@@ -1,6 +1,6 @@
 ### Your favorite idiot, that has too many interests.
 =====================================================
-- website: https://genvara.github.io
+- website: https://genvara.tk
 - discord: Genvara#2807
 - twitter: https://twitter.com/Genvarara
 - email: genvara@ttm.sh
