@@ -1,9 +1,9 @@
-### Your favorite idiot, that has too many interests.
+### i throw stuff at computers until it works, i also like writing.
 =====================================================
 - website: https://genvara.tk
 - discord: Genvara#2807
 - twitter: https://twitter.com/Genvarara
-- email: genvara@ttm.sh
+- email: genvara@ttm.sh and genvara@thunix.net
 - steam: https://steamcommunity.com/id/Genvara
 
 ![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=genvara&show_icons=true&theme=omni)
