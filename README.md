@@ -1,4 +1,4 @@
-### i throw stuff at computers until it works, i also like writing.
+### a cocktail of interests type of person
 =====================================================
 - website: https://izulerzu.tk
 - discord: izulerzu#2807
